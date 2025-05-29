@@ -5,6 +5,7 @@ import Layout from "./layouts/Layout"
 
 const Favorites = lazy(() => import('./pages/Favorites'))
 const IndexPage = lazy(() => import('./pages/IndexPage'))
+const GenerateAI = lazy(() => import('./pages/GenerateAI'))
 
 function App() {
 
@@ -21,6 +22,11 @@ function App() {
             <Route path="/favoritos" element={
               <Suspense fallback="Cargando...">
                 <Favorites/>
+              </Suspense>
+            }/>
+            <Route path="/generate" element={
+              <Suspense fallback="Cargando...">
+                <GenerateAI/>
               </Suspense>
             }/>
           </Route>
